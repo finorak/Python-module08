@@ -1,0 +1,15 @@
+[project]
+
+name = "Piscine-module-08"
+
+version = '1.0.0'
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^3.0"
+numpy = "^2.4"
+matplotlib = "^3.0"
+python-dotenv = "1.2.2"
