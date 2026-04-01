@@ -1,5 +1,6 @@
 import os
 try:
+    "We try to import the library if it's installed"
     from dotenv import load_dotenv
 except Exception:
     print("python-dotenv couldn't be imported")
@@ -9,16 +10,27 @@ def main() -> None:
     print("\nORACLE STATUS: Reading the Matrix...\n")
     error = False
     try:
+        """
+        We load the the .env
+        """
         load_dotenv()
     except Exception:
         print("Can't load env")
         return None
     print("Configuration loaded:")
+    """
+    Here we get the value in our .venv file
+    """
     MATRIX_MODE = os.getenv("MATRIX_MODE")
     DATABASE_URL = os.getenv("DATABASE_URL")
     API_KEY = os.getenv("API_KEY")
     LOG_LEVEL = os.getenv("LOG_LEVEL")
     ZION_ENDPOINT = os.getenv("ZION_ENDPOINT")
+    """
+    we just verify if it's in the .venv or not
+    if yes we print it's value else we print an error
+    messages
+    """
     if MATRIX_MODE:
         print(f"Mode: {MATRIX_MODE}")
     else:

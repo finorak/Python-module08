@@ -1,11 +1,20 @@
+"""
+In this module we verify if the
+environment we are in is the same as
+the global envim
+"""
+
+
 import sys
 import os
 
 
 def main() -> None:
+    """
     # sys.prefic is the current environment we are in
     # base_prefix is the base environment for all python
     # packages that doesn't run on a custom virtual environment
+    """
 
     # here we check if the current evironment is the same
     # as the base environment

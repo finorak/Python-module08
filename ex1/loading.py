@@ -1,6 +1,8 @@
-# We will try to import the packages
-# and handle them if the package is not
-# installed
+"""
+We will try to import the packages
+and handle them if the package is not
+installed
+"""
 try:
     import pandas as pd
 except Exception:
@@ -17,10 +19,11 @@ except Exception:
 
 
 def main() -> None:
-    # because the subject didn't asked to make the
+    """ because the subject didn't asked to make the
     # data visualiasation or manipulation a deep on
     # we just foccused on showing and manipulating a
     # simple data
+    """
     print("LOADING STATUS: Loading progrmas...\n")
     print("Cecking dependeces:")
     pandas_check = "Data manipulation failed"
