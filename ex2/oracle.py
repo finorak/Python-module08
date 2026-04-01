@@ -21,38 +21,38 @@ def main() -> None:
     """
     Here we get the value in our .venv file
     """
-    MATRIX_MODE = os.getenv("MATRIX_MODE")
-    DATABASE_URL = os.getenv("DATABASE_URL")
-    API_KEY = os.getenv("API_KEY")
-    LOG_LEVEL = os.getenv("LOG_LEVEL")
-    ZION_ENDPOINT = os.getenv("ZION_ENDPOINT")
+    matrix_mode = os.getenv("MATRIX_MODE")
+    database_url = os.getenv("DATABASE_URL")
+    api_key = os.getenv("API_KEY")
+    log_level = os.getenv("LOG_LEVEL")
+    zion_endpoint = os.getenv("ZION_ENDPOINT")
     """
     we just verify if it's in the .venv or not
     if yes we print it's value else we print an error
     messages
     """
-    if MATRIX_MODE:
-        print(f"Mode: {MATRIX_MODE}")
+    if matrix_mode:
+        print(f"Mode: {matrix_mode}")
     else:
         print("Mode not specified")
         error = True
-    if DATABASE_URL:
+    if database_url:
         print("Database: Connected to local instance")
     else:
         print("Database not connected")
         error = True
-    if API_KEY:
+    if api_key:
         print("API Access: Authenticated")
     else:
         print("API Acess: Denied")
         error = True
-    if LOG_LEVEL:
-        print(f"Log Level: {LOG_LEVEL}")
+    if log_level:
+        print(f"Log Level: {log_level}")
     else:
         print("Log file not specified")
         error = True
-    if ZION_ENDPOINT:
-        print(f"Zion Network: {ZION_ENDPOINT}")
+    if zion_endpoint:
+        print(f"Zion Network: {zion_endpoint}")
     else:
         print("Zion Network not specified")
         error = True
